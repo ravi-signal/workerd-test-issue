@@ -1,0 +1,23 @@
+{
+  "name": "repro",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "./dist/index.js",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.33.0",
+    "wrangler": "^3.2.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "pretest": "wrangler deploy --dry-run --outdir=dist",
+    "test": "vitest"
+  }
+}

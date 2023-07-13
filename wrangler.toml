@@ -1,0 +1,4 @@
+name = "repro"
+main = "src/index.ts"
+compatibility_date = "2023-05-10"
+compatibility_flags = [ "nodejs_compat" ]
